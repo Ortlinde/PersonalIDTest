@@ -15,6 +15,7 @@ public class Checker {
 		}
 		ans = 10 - ans%10;
 		
+		System.out.println("Result is " + ans + ", and verification number is " + verification + ".");
 		if(ans == verification)
 			return true;
 		
@@ -24,10 +25,12 @@ public class Checker {
 	private static boolean checker(String input) {
 		if(input.length() != 10) 
 			return false;
-		else if(input.charAt(0) <= 'A' || input.charAt(0) >= 'Z')
+		if(input.charAt(0) < 'A' || input.charAt(0) > 'Z')
 			return false;
-		for(int i=1; i<=10; i++) {
-			if(input.charAt(i) <= '0' || input.charAt(i) >= '9')
+		if(input.charAt(1) != '1' && input.charAt(1) != '2')
+			return false;
+		for(int i=2; i<10; i++) {
+			if(input.charAt(i) < '0' || input.charAt(i) > '9')
 				return false;
 		}
 		

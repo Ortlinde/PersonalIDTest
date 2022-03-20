@@ -20,9 +20,9 @@ public class IDChecker {
 			if(inputStr.toLowerCase().equals("exit"))
 				break;
 			
-			System.out.println("Your ID is: " + inputStr);
+			System.out.println("Your ID is: " + inputStr + "\n");
 			System.out.println(
-					Checker.isValid(inputStr) ? "ID valid!":"ID invalid!"
+					Checker.isValid(inputStr) ? "ID is valid!":"ID is invalid!"
 			);
 			System.out.println("--------------------");
 		}
